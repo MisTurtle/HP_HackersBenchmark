@@ -9,7 +9,6 @@ class SceneManager(Provider[int, Scene], metaclass=Singleton):
 
 	MENU_SCENE = 0
 	GAME_SCENE = 1
-	END_SCENE = 2
 
 	def __init__(self):
 		super().__init__()

@@ -17,7 +17,6 @@ from typing import Callable, Any
 
 from game import challenge_manager
 from scene import scene_manager
-from scene.all.EndScene import EndScene
 from scene.all.GameScene import GameScene
 from scene.all.MenuScene import MenuScene
 from utils import AppState, C, Provider
@@ -40,7 +39,6 @@ pygame.display.set_icon(providers.SpriteProvider.get('HoneyPot_Logo_NOBG_Centere
 scene_manager.set(scene_manager.MENU_SCENE, MenuScene())
 game_scene = GameScene()
 scene_manager.set(scene_manager.GAME_SCENE, game_scene)
-scene_manager.set(scene_manager.END_SCENE, EndScene())
 
 challenge_manager.init_challenges()
 
