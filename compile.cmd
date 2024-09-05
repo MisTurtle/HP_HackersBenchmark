@@ -1,0 +1,1 @@
+pyinstaller -F HackersBenchmark.py --splash Honeypot_Logo_BG_Centered.jpg --noconsole -i Honeypot.ico --add-data resources/sprites/*.png:resources/sprites --add-data resources/sprites/Challenges/*.png:resources/sprites/Challenges --add-data resources/fonts/*:resources/fonts --add-data resources/files/*:resources/files
