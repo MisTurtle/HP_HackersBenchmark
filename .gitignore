@@ -3,3 +3,4 @@
 /.idea/
 /resources/sprites/*.xcf
 /resources/sprites/Challenges/*.xcf
+**/__pycache__/
