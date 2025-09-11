@@ -1,0 +1,1 @@
+pyinstaller -F main.py --splash Honeypot_Logo_BG_Centered.jpg --noconsole -i Honeypot.ico --add-data resources/sprites/*.png:resources/sprites --add-data resources/fonts/*:resources/fonts
