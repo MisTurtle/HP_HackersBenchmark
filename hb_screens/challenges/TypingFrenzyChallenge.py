@@ -35,7 +35,7 @@ class TypingFrenzyChallenge(ChallengeScreen):
             TypingFrenzyChallenge.ALL[random.randint(0, len(TypingFrenzyChallenge.ALL) - 1)],
             font=FontProvider.get(('JetBrainsMono-Medium.ttf', 28)),
             align="center",
-            placeholder_color=ColorProvider.get('bg_dark_lighter'),
+            placeholder_color=ColorProvider.get('placeholder'),
             rel_x=0.5, rel_y=0.5, rel_width=0.8, rel_height=0.1, 
             on_type=self.timer.start,
             on_complete=lambda: (self.timer.stop(), self.display_results())

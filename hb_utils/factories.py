@@ -11,7 +11,7 @@ def __load_colors():
 	ColorProvider.set("bg_dark_lighter", pygame.Color(0x30, 0x30, 0x30))
 	ColorProvider.set("fg", pygame.Color(0xAD, 0x21, 0x8D))
 	ColorProvider.set("fg2", pygame.Color(0xED, 0x91, 0xD8))
-	ColorProvider.set("placeholder", pygame.Color(0x85, 0x85, 0x85))
+	ColorProvider.set("placeholder", pygame.Color(0xbE, 0xbe, 0xbe))
 	ColorProvider.set("success", pygame.Color(0xA8, 0xFF, 0x99))
 	ColorProvider.set("success2", pygame.Color(0x69, 0xFF, 0x5C))
 	ColorProvider.set("error", pygame.Color(0xFF, 0x99, 0x99))

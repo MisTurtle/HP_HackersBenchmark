@@ -40,7 +40,11 @@ class ChallengeScreen(Scene, ABC):
         _ = lambda: self.start_button.color.animate(start=ColorProvider.get('fg'), end=ColorProvider.get('fg2'), duration=1, loop=True, easing=ease_in_out)
         self.start_button.color.animate(start=ColorProvider.get('bg_dark'), end=ColorProvider.get('fg'), after=_, duration=1, loop=False, easing=ease_in_out)
         self.add_widget(self.start_button)
-
+        
+        self.skip_button = TextButton( text="Jeu Suivant", font_name='JACK.TTF', callback=self.continue_callback, rel_x=0.2, rel_y=0.9, rel_height=0.05, rel_width=0 )
+        _ = lambda: self.skip_button.color.animate(start=ColorProvider.get('fg'), end=ColorProvider.get('fg2'), duration=1, loop=True, easing=ease_in_out)
+        self.skip_button.color.animate(start=ColorProvider.get('bg_dark'), end=ColorProvider.get('fg'), after=_, duration=1, loop=False, easing=ease_in_out)
+        self.add_widget(self.skip_button)
         self.challenge_result = TextWidget("", font=FontProvider.get(("JACK.TTF", 64)), color=ColorProvider.get('fg2'), align='center', rel_x=0.5, rel_y=0.3, rel_width=0.8, rel_height=0.1)
         
         self.leaderboard_display = TextWidget("", font=FontProvider.get(("JACK.TTF", 42)), color=ColorProvider.get('fg2'), align='center', rel_x=0.5, rel_y=0.7, rel_width=0.8, rel_height=0.4)

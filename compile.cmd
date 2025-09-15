@@ -1,1 +1,2 @@
-pyinstaller -F main.py --splash Honeypot_Logo_BG_Centered.jpg --noconsole -i Honeypot.ico --add-data resources/sprites/*.png:resources/sprites --add-data resources/fonts/*:resources/fonts
+rm -rf build dist main.spec
+pyinstaller --onefile -F HackersBenchmark/main.py --splash HackersBenchmark/Honeypot_Logo_BG_Centered.jpg --noconsole -i HackersBenchmark/Honeypot.ico --add-data HackersBenchmark/resources/sprites/*.png:resources/sprites --add-data HackersBenchmark/resources/fonts/*:resources/fonts --hidden-import=hb_screens --hidden-import=hb_types --hidden-import=hb_utils

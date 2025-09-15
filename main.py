@@ -1,3 +1,13 @@
+
+import os
+import sys
+import time
+
+if getattr(sys, 'frozen', False):
+	os.chdir(sys._MEIPASS)
+	import pyi_splash
+	pyi_splash.close()
+
 import random
 import time
 import pygame
@@ -98,7 +108,7 @@ def glitch_shader(screen: pygame.Surface, t: float):
 		screen.blit(frame_b, pos_a)
 
 
-game_timeline = GameTimeline(WelcomeScreen(player_info=PlayerInfo(username="MisTurtle")))
+game_timeline = GameTimeline(WelcomeScreen(player_info=PlayerInfo(username="Karma")))
 running = True
 while running:
     frame_start = time.time()

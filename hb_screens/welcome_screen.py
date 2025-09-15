@@ -33,10 +33,10 @@ class WelcomeScreen(Scene):
         best_players = get_best_average_placement(leaderboards)
         if len(best_players) > 0:
             template = "#{i:<2} {name:<20} - Rang: {placement:.2f}"
-            best = "\n".join(template.format(i=i + 1, name=best_players[i][0], placement=best_players[i][1]) for i in range(3))
+            best = "\n".join(template.format(i=i + 1, name=best_players[i][0], placement=best_players[i][1]) for i in range(min(len(best_players), 3)))
             if self.player_info is not None:
                 current_player_rank = next((i for i in range(len(best_players)) if best_players[i][0].lower() == self.player_info.username.lower()), None)
-                if current_player_rank > 3:
+                if current_player_rank is not None and current_player_rank >= 3:
                     best += "\n" + "-" * 36 + "\n" + template.format(i=current_player_rank + 1, name=self.player_info.username, placement=best_players[current_player_rank][1])
             self.best_player = TextWidget("Top 3 Hackers\n" + best, font=FontProvider.get(("JACK.TTF", 42)), color=ColorProvider.get('fg'), align='center', rel_x=0.5, rel_y=0.75, rel_width=0.8, rel_height=0.4)
             self.best_player.zoom.animate(start=0, end=1, duration=0.5, easing=ease_in_out)
